@@ -58,3 +58,5 @@ let roman = {
 
 
 console.log(romanToInt("MCMXCIV"));
+
+//Output : 1994
