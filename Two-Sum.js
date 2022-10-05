@@ -20,11 +20,23 @@ Solution:
  * @param {number} target
  * @return {number[]}
  */
- var nums = [3,2,4];
- var target = 6;
+
  
+var nums = [3,2,4];
+var target = 6;
+
+
  var twoSum = function(nums, target) {
-     return [nums.indexOf(2),nums.indexOf(4)];
- };
- 
- console.log(twoSum);
+  const result = [];
+  for(let i=0;i<nums.length;i++){
+      if(nums.indexOf(target-nums[i]) !== -1 && nums.indexOf(target-nums[i]) !== i){
+          result.push(i);
+          result.push(nums.indexOf(target-nums[i]));
+          break;
+      }
+  }
+  return result;
+};
+
+console.log(twoSum(nums,target));
+
